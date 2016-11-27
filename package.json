@@ -11,14 +11,35 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:asme.reveal",
+        "workspaceContains:CMakeLists.txt",
+        "onLanguage:cpp",
+        "onLanguage:c",
+        "onCommand:asme.showExplorerToSide"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "commands": [
+            {
+                "command": "asme.reveal",
+                "title": "Show Assembly Inline",
+                "category": "Assembly Explorer"
+            },
+            {
+                "command": "asme.showExplorerToSide",
+                "title": "Show Assembly Explorer",
+                "category": "Assembly Explorer"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "command": "asme.showExplorerToSide",
+                    "group": "navigation",
+                    "when": "editorLangId == cpp"
+                }
+            ]
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
@@ -30,6 +51,10 @@
         "vscode": "^1.0.0",
         "mocha": "^2.3.3",
         "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+        "@types/mocha": "^2.2.32",
+        "@types/lazy.js": "^0.3.28"
+    },
+    "dependencies": {
+        "lazy.js": "^0.4.2"
     }
 }

@@ -1,0 +1,21 @@
+{
+  "name": "asm-explorer",
+  "authors": [
+    "vector-of-bool <vectorofbool@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "codemirror": "^5.21.0"
+  }
+}
