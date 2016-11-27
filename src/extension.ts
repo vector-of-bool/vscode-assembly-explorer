@@ -23,6 +23,7 @@ async function writeFile(filename: string, content: string): Promise<void> {
 
 type Maybe<T> = T|null;
 
+// Colors from http://colorbrewer2.org/#type=qualitative&scheme=Pastel1&n=8
 const COLORS = ['#fbb4ae','#b3cde3','#ccebc5','#decbe4','#fed9a6','#ffffcc','#e5d8bd','#fddaec'];
 
 interface AssemblyListing {
